@@ -1,2 +1,9 @@
-puts (1...1000).inject(0) { |sum, i| sum += (i % 3 == 0 || i % 5 == 0) ? i : 0 }
+def funcion(v = 0)
+	yield
+end
 
+bloque = do |sum, i|
+	sum += i
+end
+
+funcion(0) bloque
